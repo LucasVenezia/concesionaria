@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Autos usados seleccionados en venta. Todas las marcas. Planes de financiación. Vehículos con revisiones para garantía del cliente.">
+  <meta name="keywords" content="CONCESIONARIA DE AUTOMOVILES, AUTOS USADOS, FINANCIACION DE AUTOS, AUTOMÓVILES NUEVOS, AGENCIAS BERAZATEGUI">
+  <title>Financialo</title>
+  <link rel="shortcut icon" href="../images/favicon2.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <header class="headerConFoto">
+    <!--insertado de imagen Logo-->
+    <div class="logo">
+      <a href="../index.html"><img src="../images/logo.png" alt="logo" title="ir a inicio"></a>
+    </div>
+    <nav class="navMenu">
+      <ul>
+        <!--creacion de lista de menu con link a dif. paginas-->
+        <li><a href="../index.html"><i class="fas fa-home"></i></a></li>
+        <li><a href="buscatuauto.html">Buscá tu Auto</a></li>
+        <li><a href="vender.html">Vender</a></li>
+        <li><a href="financialo.html">Financialo</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="contactanos.html">Contactanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="mainFinancialo">
+    <div class="encabezado">
+      <h1 class="encabezado__titulo">FINANCIALO</h1>
+      <p class="encabezado__parrafo parrafo--1">SIMULÁ EL CRÉDITO DEL AUTO <br> QUE QUERÉS Y COMPLETA EL <br>
+        PRE-APROBADO DE TU PRÉSTAMO</p>
+      <p class="encabezado__parrafo parrafo--2">Financiamos tu auto usado con mínimos requisitos.</p>
+    </div>
+    <div class="div2">
+      <h2>CRÉDITOS EN 24 HS.</h2>
+      <h3>SIMULADOR</h3>
+      <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+          aria-expanded="false" aria-controls="multiCollapseExample1">PRÉSTAMO PRENDARIO</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
+          aria-expanded="false" aria-controls="multiCollapseExample2">LEASING PARA EMPRESAS</button>
+        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button> -->
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              En Tresa, el préstamo prendario es la forma más utilizada para financiar tu auto 0 km o usado de hasta 10
+              años de antigüedad, con mínimos requisitos.
+
+              Podés financiar la compra de tu auto a tasa fija y en pesos.
+              El préstamo es proporcionado sobre la garantía del auto que deseas adquirir, por eso es de fácil
+              otorgamiento.
+              Podés financiar hasta el 70% del valor de tu 0 Km y en usados dependiendo la antigüedad del vehículo.
+              Con plazos flexibles de hasta 60 meses y la posibilidad de debitarlo automáticamente de tu cuenta.
+              Es accesible para personas bancarizadas y no bancarizadas.
+              *El porcentaje y la aprobación están sujetos a las condiciones de la entidad que financie.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+              Es una herramienta de financiación que está destinada a la adquisición de 0km.
+
+              El leasing es un alquiler con opción a compra que luego del pago de cuotas, llamados cánones, podés optar
+              por comprar el auto por un monto similar al que estuviste abonando como cuota. (Ley 25.248)
+              * Sujeto a tipo de Leasing suscripto.
+
+
+              *BENEFICIOS
+              Posibilita financiar hasta el 100% del auto, dependiendo de cuáles sean sus ingresos, evitando un
+              desembolso inicial importante y del IVA sobre la compra del auto. La operación de leasing permite liberar
+              fondos, optimizando el manejo del capital de trabajo de la empresa (Sujeto a aprobación crediticia).
+              Mejores índices de endeudamiento y liquidez, sin generar pasivos por la financiación obtenida.
+              El canon se considera como gasto y se deduce íntegramente del Impuesto a las Ganancias cuando el leasing
+              es asimilado a una operación financiera.
+              Tiene como efecto una amortización acelerada del Bien.
+              Se evita que el Tomador acumule créditos fiscales de IVA.
+              Los Bienes obtenidos a través de un leasing no están alcanzados por Ganancia Mínima Presunta.
+              Para saber más sobre esta financiación consúltenos
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contenido" class="w3-row w3-container limiter">
+      <div id="parametros" class="w3-col l6">
+        <label for="montoMirror">Monto a solicitar</label>
+        <input id="montoMirror" name="monto" type="text" disabled="">
+        <input id="monto" type="range" min="0" max="1000000" step="500" value="500000" onchange="amountChange(this)">
+        <label>Plazo</label>
+        <div data-id="plazo" data-value="12" class="btn-item" onclick="changeFocus(this);">12 Meses</div>
+        <div data-id="plazo" data-value="24" class="btn-item" onclick="changeFocus(this);">24 Meses</div>
+        <div data-id="plazo" data-value="36" class="btn-item" onclick="changeFocus(this);">36 Meses</div>
+        <div data-id="plazo" data-value="48" class="btn-item" onclick="changeFocus(this);">48 Meses</div>
+        <div data-id="plazo" data-value="60" class="btn-item active" onclick="changeFocus(this);">60 Meses</div>
+        <div data-id="plazo" data-value="72" class="btn-item" onclick="changeFocus(this);">72 Meses</div>
+        <p class="alert alert-success" style="color:black;opacity: 0.6;background-color:#efefef;">
+          El resultado que surja del presente simulador de préstamos es meramente referencial, no reviste
+          carácter contractual ni constituye una oferta o aceptación de la solicitud que presente el cliente.
+        </p>
+      </div>
+      <div id="parametros2" class="w3-col l5">
+        <h3>Características de la operación</h3>
+        <label>CUOTA INICIAL ESTIMADA</label>
+        <label id="valor-cuota-inicial">$5.701</label>
+        <label>INGRESO REQUERIDO ESTIMADO - TITULAR</label>
+        <label id="valor-ingresos">$20.008</label>
+        <label>TOTAL DE CUOTAS</label>
+        <label id="valor-total-cuotas">60 (5 años)</label>
+        <label>TASA DE INTERÉS</label>
+        <label id="valor-tasa-interes">Fija 50,00%
+          NAV 63,21% EAV </label>
+      </div>
+    </div>
+        
+    <article class="art1">Las cuotas son fijas y en pesos, y los plazos pueden ser de 12, 24 y hasta 36 meses. La
+      financiación es de hasta el 60% del valor del vehículo, dependiendo siempre de su antigüedad y no mayor a 10 años.
+    </article>
+    <article class="art2">El otorgamiento en muy sencillo ya que cuenta con una aprobación en 24hs solo con tu DNI y no
+      es necesario estar bancarizado.</article>
+  </main>
+  <footer>
+    <section>
+      <!--redes-->
+      <div class="social">
+        <div>
+          <a class="social__facebook" href="https://www.facebook.com/Tresa-Autos-105541328375405"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div>
+          <a class="social__instagram" href="https://instagram.com/tresaautos?igshid=1m8cc0nm75hl3"><i
+              class="fab fa-instagram-square"></i><a>
+        </div>
+        <div>
+          <a class="social__whatsapp" href="https://web.whatsapp.com"><i class="fab fa-whatsapp-square"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="datosContacto">
+      <!--informacion de contacto-->
+      <p> Avenida Mitre 866, B1880EEV Berazategui, Provincia de Buenos Aires</p>
+      <a href="tel:01144449999">
+        <p>(011) 4444-9999</p>
+      </a>
+      <a href="mailto:info@tresaautos.com.ar">
+        <p>info@tresaautos.com.ar</p>
+      </a>
+    </div>
+    <h5>© Copyright Tresa Automotores 2021 - Todos los derechos reservados</h5>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+footer {
+    background-image: linear-gradient(to top, rgb(41, 39, 39), grey, white);
+    display: grid;
+    justify-items: center;
+    margin: 0;
+}
+
+.datosContacto {
+    display: flex;
+    flex-direction: column;
+    font-family: "alfa slab one";
+    color: rgba(6, 17, 46, 0.979);
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+
+    a {
+        text-decoration: none;
+        color: rgba(6, 17, 46, 0.979);
+    }
+
+}
+
+h5 {
+    color: antiquewhite;
+    margin: 0;
+    font-size: 15px;
+}
+
+.social {
+    display: flex;
+    width: 800px;
+    flex-direction: row;
+    font-size: 40px;
+    justify-content: center;
+}
+
+.social__facebook {
+    color: #3b5998;
+}
+
+.social__instagram {
+    color: rgba(177, 15, 109, 0.91);
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.social__whatsapp {
+    color: #00bb2d;
+}
+
+@media (max-width: 480px) {
+    footer {
+        justify-items: left;
+    }
+
+    .datosContacto {
+        font-size: 10px;
+        text-align: left;
+        margin: 5px;
+    }
+
+    h5 {
+        color: antiquewhite;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .social {
+        width: 420px;
+
+    }
+}
