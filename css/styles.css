@@ -263,7 +263,7 @@ li {
     border: 3px solid #615959;
     border-radius: 7px;
     filter: brightness(70%);
-    animation: escalar 3s infinite;
+    
 
 }
 .item__titulo{
@@ -283,6 +283,7 @@ li {
 
 .item__img:hover {
     filter: brightness(100%);
+    animation: escalar 3s infinite;
 }
 
 /*estilos modal */
