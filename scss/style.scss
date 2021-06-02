@@ -2,9 +2,10 @@
 @import "header";
 /* esta parte pertenece al footer */
 @import "footer";
+/* esta parte pertenece a 404 */
+@import "404";
 
-$fontColor: rgba(6, 17, 46, 0.979);
-$fontFamily: "alfa slab one";
+@import "variables";
 
 * {
     margin: 0;
