@@ -14,7 +14,6 @@ header {
         flex-direction: row;
         font-family: $fontFamily;
         font-size: 25px;
-        justify-content: flex-end;
         padding-left: 0;
         
     }
@@ -54,6 +53,7 @@ header {
 
         &:hover {
             background-color: #434343;
+            color: rgba(228, 207, 19, 0.71);
         }
     }
 

@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Autos usados seleccionados en venta. Todas las marcas. Planes de financiación. Vehículos con revisiones para garantía del cliente.">
-  <meta name="keywords" content="CONCESIONARIA DE AUTOMOVILES, AUTOS USADOS, FINANCIACION DE AUTOS, AUTOMÓVILES NUEVOS, AGENCIAS BERAZATEGUI">
+  <meta name="description"
+    content="Autos usados seleccionados en venta. Todas las marcas. Planes de financiación. Vehículos con revisiones para garantía del cliente.">
+  <meta name="keywords"
+    content="CONCESIONARIA DE AUTOMOVILES, AUTOS USADOS, FINANCIACION DE AUTOS, AUTOMÓVILES NUEVOS, AGENCIAS BERAZATEGUI">
   <title>Financialo</title>
   <link rel="shortcut icon" href="../images/favicon2.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,19 +42,19 @@
   <main class="mainFinancialo">
     <div class="encabezado">
       <h1 class="encabezado__titulo">FINANCIALO</h1>
-      <p class="encabezado__parrafo parrafo--1">SIMULÁ EL CRÉDITO DEL AUTO <br> QUE QUERÉS Y COMPLETA EL <br>
-        PRE-APROBADO DE TU PRÉSTAMO</p>
+      <p class="encabezado__parrafo parrafo--1">SIMULÁ EL CRÉDITO DEL AUTO <br> QUE QUERÉS!</p>
       <p class="encabezado__parrafo parrafo--2">Financiamos tu auto usado con mínimos requisitos.</p>
     </div>
     <div class="div2">
       <h2>CRÉDITOS EN 24 HS.</h2>
-      <h3>SIMULADOR</h3>
+      <!--botones  bootstrap collapse-->
       <p>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-          aria-expanded="false" aria-controls="multiCollapseExample1">PRÉSTAMO PRENDARIO</a>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
-          aria-expanded="false" aria-controls="multiCollapseExample2">LEASING PARA EMPRESAS</button>
-        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button> -->
+        <a class="btn btn-primary form__input form__input--boton" data-bs-toggle="collapse"
+          href="#multiCollapseExample1" role="button" aria-expanded="false"
+          aria-controls="multiCollapseExample1">PRENDARIO</a>
+        <button class="btn btn-primary form__input form__input--boton" type="button" data-bs-toggle="collapse"
+          data-bs-target="#multiCollapseExample2" aria-expanded="false"
+          aria-controls="multiCollapseExample2">LEASING</button>
       </p>
       <div class="row">
         <div class="col">
@@ -97,65 +99,97 @@
         </div>
       </div>
     </div>
-    <div id="contenido" class="w3-row w3-container limiter">
-      <div id="parametros" class="w3-col l6">
-        <label for="montoMirror">Monto a solicitar</label>
-        <input id="montoMirror" name="monto" type="text" disabled="">
-        <input id="monto" type="range" min="0" max="1000000" step="500" value="500000" onchange="amountChange(this)">
-        <label>Plazo</label>
-        <div data-id="plazo" data-value="12" class="btn-item" onclick="changeFocus(this);">12 Meses</div>
-        <div data-id="plazo" data-value="24" class="btn-item" onclick="changeFocus(this);">24 Meses</div>
-        <div data-id="plazo" data-value="36" class="btn-item" onclick="changeFocus(this);">36 Meses</div>
-        <div data-id="plazo" data-value="48" class="btn-item" onclick="changeFocus(this);">48 Meses</div>
-        <div data-id="plazo" data-value="60" class="btn-item active" onclick="changeFocus(this);">60 Meses</div>
-        <div data-id="plazo" data-value="72" class="btn-item" onclick="changeFocus(this);">72 Meses</div>
-        <p class="alert alert-success" style="color:black;opacity: 0.6;background-color:#efefef;">
-          El resultado que surja del presente simulador de préstamos es meramente referencial, no reviste
-          carácter contractual ni constituye una oferta o aceptación de la solicitud que presente el cliente.
-        </p>
+    <!--fin de collapse-->
+    <section id="contenido">
+      <div class="simulador">
+        <!--inicio de calculador de cuotas-->
+        <h3 class="simulador__h3">Calculá tu cuota</h3>
+        <form class="simulador__form" action="404.html">
+          <label class="form__label" for="vol">Monto del Crédito</label>
+          <input class="form__input" type="range" id="vol" name="vol" min="0" max="1000000" step="2" value="500000"
+            onchange="document.getElementById('outvol').value=value" list="tickmarks">
+          <output class="form__output" id="outvol" name="outvol" for="vol">500000</output>
+          <datalist id="tickmarks">
+            <option value="0">0</option>
+            <option value="250000">250000</option>
+            <option value="500000">500000</option>
+            <option value="750000">750000</option>
+            <option value="1000000">1000000</option>
+          </datalist>
+          <select class="form__select" name="plazo">
+            <option value="">Selecciona el Plazo</option>
+            <option value="12">12 meses</option>
+            <option value="18">18 meses</option>
+            <option value="24">24 meses</option>
+            <option value="36">36 meses</option>
+            <option value="48">48 meses</option>
+          </select>
+          <select class="form__select" name="perfil">
+            <option value="">¿Cuál es tu perfíl crediticio?</option>
+            <option value="aa">AA-Sobresaliente</option>
+            <option value="a">A-Excelente</option>
+            <option value="b">B-Superior</option>
+            <option value="c">C-Muy Bueno</option>
+            <option value="d">D-Bueno</option>
+            <option value="e">E-Adecuado</option>
+            <option value="f">F-Aceptable</option>
+          </select>
+          <input class="form__input form__input--boton" type="submit" value="Calcular">
+        </form>
       </div>
-      <div id="parametros2" class="w3-col l5">
-        <h3>Características de la operación</h3>
-        <label>CUOTA INICIAL ESTIMADA</label>
-        <label id="valor-cuota-inicial">$5.701</label>
-        <label>INGRESO REQUERIDO ESTIMADO - TITULAR</label>
-        <label id="valor-ingresos">$20.008</label>
-        <label>TOTAL DE CUOTAS</label>
-        <label id="valor-total-cuotas">60 (5 años)</label>
-        <label>TASA DE INTERÉS</label>
-        <label id="valor-tasa-interes">Fija 50,00%
-          NAV 63,21% EAV </label>
+      <div class="requisitos">
+        <h3 class="requisitos__h3">Requisitos para Crédito Personal</h3>
+        <ul>
+          <li>» Ser argentino o residente con DNI.</li>
+          <li>» Ingresos mensuales netos superiores a $90.000.</li>
+          <li>» Antigüedad laboral mínima de 6 meses (Empleados) y 12 meses (Monotributistas y autónomos).</li>
+          <li>» Buenos antecedentes de pago en los últimos 2 años.</li>
+        </ul>
+        <h3 class="requisitos__h3">Beneficios</h3>
+        <ul>
+          <li>» Sin costos de mantenimiento.</li>
+          <li>» Tasas fijas y acordes a tu perfil crediticio.</li>
+          <li>» Cancelación total o parcial sin costo.</li>
+          <li>» Te damos respuesta inmediata.</li>
+        </ul>
+        <a href="contactanos.html">
+          <input class="form__input form__input--boton" type="button" value="Solicitar mi Crédito">
+        </a>
       </div>
-    </div>
-        
-    <article class="art1">Las cuotas son fijas y en pesos, y los plazos pueden ser de 12, 24 y hasta 36 meses. La
+    </section>
+    <!-- articulos de pie de cuerpor principal-->
+    <article class="art1">Las cuotas son fijas y en pesos, y los plazos pueden ser de 12, 18, 24, 36 y hasta 48 meses.
+      La
       financiación es de hasta el 60% del valor del vehículo, dependiendo siempre de su antigüedad y no mayor a 10 años.
     </article>
     <article class="art2">El otorgamiento en muy sencillo ya que cuenta con una aprobación en 24hs solo con tu DNI y no
       es necesario estar bancarizado.</article>
+    <!--fin de cuerpor principal-->
   </main>
   <footer>
     <section>
       <!--redes-->
       <div class="social">
         <div>
-          <a class="social__facebook" href="https://www.facebook.com/Tresa-Autos-105541328375405"><i class="fab fa-facebook-square"></i></a>
+          <a class="social__facebook" href="https://www.facebook.com/Tresa-Autos-105541328375405"><i
+              class="fab fa-facebook-square"></i></a>
         </div>
         <div>
           <a class="social__instagram" href="https://instagram.com/tresaautos?igshid=1m8cc0nm75hl3"><i
               class="fab fa-instagram-square"></i><a>
         </div>
         <div>
-          <a class="social__whatsapp" href="https://web.whatsapp.com"><i class="fab fa-whatsapp-square"></i></a>
+          <a class="social__whatsapp"
+            href="https://api.whatsapp.com/send?phone=541140581259&fbclid=IwAR3JZJ3cFh8czDIbMM33RY45DklIXNkqDQq8XjwjM5uduz6tZWO6dVB0qxs"><i
+              class="fab fa-whatsapp-square"></i></a>
         </div>
       </div>
     </section>
-
     <div class="datosContacto">
       <!--informacion de contacto-->
       <p> Avenida Mitre 866, B1880EEV Berazategui, Provincia de Buenos Aires</p>
-      <a href="tel:01144449999">
-        <p>(011) 4444-9999</p>
+      <a href="tel:+54 11 4058-1259">
+        <p>(011) 15-4058-1259</p>
       </a>
       <a href="mailto:info@tresaautos.com.ar">
         <p>info@tresaautos.com.ar</p>
