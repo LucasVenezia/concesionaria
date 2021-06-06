@@ -5,6 +5,7 @@ footer {
     display: grid;
     justify-items: center;
     margin: 0;
+    
 }
 
 .datosContacto {
@@ -15,10 +16,15 @@ footer {
     font-size: 20px;
     text-align: center;
     margin: 20px;
-
+    
+    p {
+        margin-bottom: 0;
+    }
+    
     a {
         text-decoration: none;
         color: $fontColor;
+        margin-bottom: 0;
     }
 
 }
@@ -31,7 +37,7 @@ h5 {
 
 .social {
     display: flex;
-    width: 800px;
+    width: 100vw;
     flex-direction: row;
     font-size: 40px;
     justify-content: center;
@@ -52,14 +58,37 @@ h5 {
     color: #00bb2d;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     footer {
-        justify-items: left;
+        justify-items: center;
+    }
+
+    .datosContacto {
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    h5 {
+        color: antiquewhite;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .social {
+        width: 350px;
+
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 968px) {
+    footer {
+        justify-items: center;
     }
 
     .datosContacto {
         font-size: 10px;
-        text-align: left;
+        text-align: center;
         margin: 5px;
     }
 

@@ -13,8 +13,9 @@ header {
         display: flex;
         flex-direction: row;
         font-family: $fontFamily;
-        font-size: 25px;
+        font-size: 20px;
         padding-left: 0;
+        margin-bottom: 0;
         
     }
 }
@@ -45,7 +46,7 @@ header {
     line-height: 1;
 
     ul li a {
-        background-color: rgba(228, 207, 19, 0.71);
+        background-color: $ColorBack;
         color: $fontColor;
         text-decoration: none;
         padding: 5px;
@@ -53,7 +54,7 @@ header {
 
         &:hover {
             background-color: #434343;
-            color: rgba(228, 207, 19, 0.71);
+            color: $ColorBack;
         }
     }
 
@@ -78,29 +79,43 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    height: auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50vw 50vw;
         grid-template-rows: 1fr;
         grid-template-areas:
             "men logo";
         height: 25vh;
+        ul,
+        li {
+            display: flex;
+            flex-direction: column;
+            font-family: $fontFamily;
+            font-size: 15px;
     }
-
-    header ul,
-    li {
-        display: flex;
-        flex-direction: column;
-        font-family: $fontFamily;
-        font-size: 15px;
-    }
+}
 
     header .logo img {
-        width: 100%;
+        width: 60%;
         padding: 0;
+    }
+    .logo {
+        align-self: center;
+        text-align: right;
+        padding-right: 45px;
+        
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 968px) {
+    header {
+        ul,
+        li {
+        font-size: 10px;
+        }
     }
 }

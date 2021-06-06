@@ -10,8 +10,9 @@ header {
     display: flex;
     flex-direction: row;
     font-family: "alfa slab one";
-    font-size: 25px;
-    padding-left: 0; }
+    font-size: 20px;
+    padding-left: 0;
+    margin-bottom: 0; }
 
 .logo img {
   width: 60%;
@@ -60,24 +61,34 @@ header {
   background-image: url(../images/image-contact-us2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  height: auto; }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50vw 50vw;
     grid-template-rows: 1fr;
     grid-template-areas: "men logo";
     height: 25vh; }
-  header ul,
-  li {
-    display: flex;
-    flex-direction: column;
-    font-family: "alfa slab one";
-    font-size: 15px; }
+    header ul,
+    header li {
+      display: flex;
+      flex-direction: column;
+      font-family: "alfa slab one";
+      font-size: 15px; }
   header .logo img {
-    width: 100%;
-    padding: 0; } }
+    width: 60%;
+    padding: 0; }
+  .logo {
+    align-self: center;
+    text-align: right;
+    padding-right: 45px; } }
+
+@media only screen and (min-width: 577px) and (max-width: 968px) {
+  header ul,
+  header li {
+    font-size: 10px; } }
 
 /* esta parte pertenece al footer */
 footer {
@@ -94,9 +105,12 @@ footer {
   font-size: 20px;
   text-align: center;
   margin: 20px; }
+  .datosContacto p {
+    margin-bottom: 0; }
   .datosContacto a {
     text-decoration: none;
-    color: rgba(6, 17, 46, 0.979); }
+    color: rgba(6, 17, 46, 0.979);
+    margin-bottom: 0; }
 
 h5 {
   color: antiquewhite;
@@ -105,7 +119,7 @@ h5 {
 
 .social {
   display: flex;
-  width: 800px;
+  width: 100vw;
   flex-direction: row;
   font-size: 40px;
   justify-content: center; }
@@ -121,12 +135,26 @@ h5 {
 .social__whatsapp {
   color: #00bb2d; }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   footer {
-    justify-items: left; }
+    justify-items: center; }
+  .datosContacto {
+    font-size: 15px;
+    text-align: center;
+    margin: 5px; }
+  h5 {
+    color: antiquewhite;
+    margin: 0;
+    font-size: 10px; }
+  .social {
+    width: 350px; } }
+
+@media only screen and (min-width: 577px) and (max-width: 968px) {
+  footer {
+    justify-items: center; }
   .datosContacto {
     font-size: 10px;
-    text-align: left;
+    text-align: center;
     margin: 5px; }
   h5 {
     color: antiquewhite;
@@ -144,10 +172,6 @@ h5 {
     font-family: "alfa slab one";
     color: rgba(6, 17, 46, 0.979);
     text-transform: uppercase; }
-
-* {
-  margin: 0;
-  padding: 0; }
 
 /* pertenece a seccion vender */
 .mainVender {
@@ -194,3 +218,41 @@ h5 {
     border-radius: 15px;
     font-family: 'Times New Roman', Times, serif;
     padding-left: 10px; }
+
+@media (max-width: 576px) {
+  .mainVender {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 680px; }
+  .parrafo {
+    display: flex; }
+  .parrafo--primero {
+    font-size: 15px;
+    margin: 5px; }
+  .parrafo--segundo {
+    font-size: 10px;
+    margin-top: 5px;
+    align-self: center; }
+  .formVender {
+    font-size: 15px;
+    position: relative; } }
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .parrafo--primero {
+    font-size: 30px;
+    margin: 5px;
+    padding-left: 5px; }
+  .parrafo--segundo {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 5px; }
+  .formVender {
+    font-size: 15px;
+    position: relative;
+    padding-right: 5px; } }
+
+* {
+  margin: 0;
+  padding: 0; }

@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styles.css">
 
 
@@ -43,55 +44,64 @@
   <main class="mainindex">
     <h1>TRESA: SU AGENCIA DE CONFIANZA</h1>
     <!--carrusel bootstrap-->
-    <div id="carouselExampleCaptions" class="carousel slide carrusel" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+    <div class="conatainer">
+      <div class="row">
+        <div class="col-12">
+          <div id="carouselExampleCaptions" class="carousel slide carrusel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="pages/buscatuauto.html">
+
+                  <img src="images/carrusel/img01.jpg" class="d-block w-100" alt="fiat cronos rojo">
+
+                </a>
+                <div class="carousel-caption carrusel__texto d-none d-md-block">
+                  <p>USADOS SELECCIONADOS</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="pages/buscatuauto.html">
+                  <img src="images/carrusel/img02.jpg" class="d-block w-100" alt="hyundai azul">
+                </a>
+                <div class="carousel-caption carrusel__texto d-none d-md-block">
+                  <h5 class="indexH5">OPORTUNIDADES</h5>
+                  <p>PARA COMPRAR TU PROXIMO AUTO</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="pages/financialo.html">
+                  <img src="images/carrusel/img03.jpg" class="d-block w-100" alt="salon autos">
+                </a>
+                <div class="carousel-caption carrusel__texto d-none d-md-block">
+                  <P>PLANES DE</P>
+                  <h5 class="indexH5">FINANCIACION</h5>
+                  <p>PARA CADA NECESIDAD</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="pages/buscatuauto.html">
-            <img src="images/img/img01.jpg" class="d-block w-100" alt="fiat cronos rojo" width="400px" height="450px">
-          </a>
-          <div class="carousel-caption carrusel__texto d-none d-md-block">
-            <p>USADOS SELECCIONADOS</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <a href="pages/buscatuauto.html">
-            <img src="images/img/img02.jpg" class="d-block w-100" alt="hyundai azul" width="400px" height="450px">
-          </a>
-            <div class="carousel-caption carrusel__texto d-none d-md-block">
-            <h5 class="indexH5">OPORTUNIDADES</h5>
-            <p>PARA COMPRAR TU PROXIMO AUTO</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <a href="pages/financialo.html">
-            <img src="images/fondoContact.jpg" class="d-block w-100" alt="salon autos" width="400px" height="450px">
-          </a>
-          <div class="carousel-caption carrusel__texto d-none d-md-block">
-            <P>PLANES DE</P>
-            <h5 class="indexH5">FINANCIACION</h5>
-            <p>PARA CADA NECESIDAD</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
+
     <!--fin de carrusel-->
     <section class="content">
       <!-- inicio tarjetas-->
@@ -130,7 +140,6 @@
             categorías, pick-ups, clásicos y los mejores usados seleccionados
             premium.</p>
         </div>
-
       </div>
       <div class="wrap">
         <div class=tarjeta-wrap>
@@ -150,8 +159,8 @@
             buscando, como nuevo.</p>
         </div>
       </div>
-    </section>
-    <article class="articulo">
+    </section> <!--fin de tarjetas-->
+    <article class="articulo"><!--inicio de articulos-->
       <h3 class="articulo__h3">NOTICIAS</h3>
       <iframe class="articulo__ifr" width="400" height="250" src="https://www.youtube.com/embed/1kcbyQU3Jpk"
         title="YouTube video player" frameborder="0"
@@ -161,7 +170,7 @@
         src="https://www.youtube.com/embed/Nln57YCFgBI" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-    </article>
+    </article><!--fin de articulo-->
   </main>
   <footer>
     <section>
@@ -176,11 +185,12 @@
               class="fab fa-instagram-square"></i><a>
         </div>
         <div>
-          <a class="social__whatsapp" href="https://api.whatsapp.com/send?phone=541140581259&fbclid=IwAR3JZJ3cFh8czDIbMM33RY45DklIXNkqDQq8XjwjM5uduz6tZWO6dVB0qxs"><i class="fab fa-whatsapp-square"></i></a>
+          <a class="social__whatsapp"
+            href="https://api.whatsapp.com/send?phone=541140581259&fbclid=IwAR3JZJ3cFh8czDIbMM33RY45DklIXNkqDQq8XjwjM5uduz6tZWO6dVB0qxs"><i
+              class="fab fa-whatsapp-square"></i></a>
         </div>
       </div>
     </section>
-
     <div class="datosContacto">
       <!--informacion de contacto-->
       <p> Avenida Mitre 866, B1880EEV Berazategui, Provincia de Buenos Aires</p>

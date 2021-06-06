@@ -1,0 +1,114 @@
+/* pertenece a seccion vender */
+.mainVender {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 600px;
+    position: relative;
+    font-family: $fontFamily;
+    color: $fontColor;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/backVender.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        opacity: 0.6;
+    }
+}
+
+.parrafo {
+    position: relative;
+}
+
+.parrafo--primero {
+    font-size: 65px;
+
+}
+
+.parrafo--segundo {
+    font-size: 25px;
+    margin-top: 30px;
+
+}
+
+.formVender {
+    font-size: 20px;
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    .form__input {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 40px;
+        border-radius: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-left: 10px;
+    }
+
+    .form__select {
+        @extend .form__input;
+    }
+}
+
+@media (max-width: 576px) {
+    .mainVender {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        height: 680px;
+    }
+    .parrafo {
+        display: flex;
+    }
+    .parrafo--primero {
+        font-size: 15px;
+        margin: 5px;
+        
+    }
+    
+    .parrafo--segundo {
+        font-size: 10px;
+        margin-top: 5px;
+        align-self: center;
+    
+    }
+    .formVender {
+        font-size: 15px;
+        position: relative;
+    }
+    
+    
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .parrafo--primero {
+        font-size: 30px;
+        margin: 5px;
+        padding-left: 5px;
+        
+    }
+    
+    .parrafo--segundo {
+        font-size: 20px;
+        margin-top: 5px;
+        padding-left: 5px;
+        
+    }
+
+    .formVender {
+        font-size: 15px;
+        position: relative;
+        padding-right: 5px;
+    }
+}
